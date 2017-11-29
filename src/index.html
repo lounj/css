@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>ircloud-ydh-css</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="left-menu">
+			<ul>
+				<li value="dot">dot</li>
+				<li value="invalid">table-row-invalid</li>
+				<li value="ell">ell</li>
+				<li value="statistics">statistics-box</li>
+			</ul>
+		</div>
+		<div class="content-box">
+			<div class="content-item-dot item">
+				<h2>新功能提示小圆点</h2>
+				<div class="dot"></div>
+				<div class="how-use">
+					使用：为元素添加class为dot
+				</div>
+			</div>
+			<div class="content-item-invalid item">
+				<h2>表格行作废样式</h2>
+				<img src="./images/table-row-invalid.png" alt="">
+				<div class="how-use">
+					使用：表格行作废字体颜色 使用方法
+					<pre>&lt;div class=&quot;table-row-invalid&quot;&gt;&lt;/div&gt;</pre>
+				</div>
+			</div>
+			<div class="item">
+				<h2>出入库折叠样式</h2>
+				<img src="./images/CollapseTable.gif" alt="">
+				<div class="how-use">
+					使用：订单出库审核及采购入库页折叠样式使用(CollapseTable组件)
+					<pre>&lt;div className={"collapse-item-box "+(this.state.isOpen?'active':'')}&gt;
+    &lt;div className="collapse-item-header" onClick={::this.handleToggle}&gt;
+    	&lt;div className="collapse-item-title">&lt;span&gt;&lt;i className="iconfont"&gt;{this.props.icon}&lt;/i&gt;&nbsp;&nbsp;{this.props.title}&lt;/span&gt;&lt;/div&gt;
+    	&lt;div className="collapse-item-icon"&gt;{this.state.isOpen?(&lt;i className="iconfont"&gt;&#xe602;&lt;/i&gt;):(&lt;i className="iconfont"&gt;&#xe612;&lt;/i&gt;)}&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;AnimationWrap&gt;
+    	{this.state.isOpen&&(&lt;div className="collapse-item-body"&gt;
+    	{this.props.dataContent&&this.props.dataContent()}
+    	&lt;/div&gt;)}
+    &lt;/AnimationWrap&gt;
+&lt;/div&gt;
+					</pre>
+				</div>
+			</div>
+			<div class="content-item-ell item">
+				<h2>超出区域的字体内容以省略号表示，不换行,class名为ell</h2>
+				<div class="ell ell-content">
+					sfjksfsfjhfjshfjfhjfhdjfhjdhdjhdjfhdjfhdjfhjshsjfhsjhj
+				</div>
+				<div class="how-use">
+					使用：超出区域的字体内容以省略号表示，不换行
+					<pre>&lt;div className="ell"&gt;&lt;sfjksfsfjhfjshfjfhjfhdjfhjdhdjhdjfhdjfhdjfhjshsjfhsjhj/div&gt;</pre>
+				</div>
+			</div>
+			<div class="content-item-statistics-box item">
+				<h2>汇总页常见的汇总方块，class名为statistics-box</h2>
+				<img src="./images/statistiics.png">
+				<div class="how-use">
+					<p>使用：class为statistics-box,每一个显示区域class为statistics-item，背景色目前有bg-light-red,bg-light-blue,bg-light-purple,bg-light-orange,四种基础颜色，若不满足需求可以自行添加</p>
+					<pre></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
